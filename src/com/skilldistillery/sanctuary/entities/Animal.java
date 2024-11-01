@@ -5,11 +5,11 @@ public class Animal {
 
 
 	public void makeNoise() {
-
+		System.out.println("ANIMAL NOISES!");
 	}
 
 	public void eat(int amount) {
-
+		System.out.println("I'm eating " + amount + " foods.");
 	}
 
 	public String getName() {
