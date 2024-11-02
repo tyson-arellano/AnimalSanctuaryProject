@@ -1,10 +1,8 @@
 package com.skilldistillery.sanctuary.entities;
 
-
-
-public class Sauctuary {
+public class Sanctuary {
 	private Animal [] animals = new Animal [5];
-	private int numAnimals = 0;
+	
 	private Attendent attendent = new Attendent();
 
 	public void setAttendant(Attendent attendent) {
@@ -13,17 +11,22 @@ public class Sauctuary {
 	}
 	
 	public void listAnimals() {
-	   
+	   for (Animal animal : animals) {
+		if(animal != null)
+			System.out.println(animal.getName()+ " the " + animal.speciesOfAnimal());
+	}
 	}
 	public void addAnimal(Animal animal) {
-//		for (int i = 0; i < MAX_CARS; i++) {
-//			if (cars[i] == null) {
-//				cars[i]= car;
-//				break;
+		for (int i = 0; i < animals.length; i++) {
+			if (animals[i] == null) { 
+				animals[i]= animal;
+				break;
+			}
 	}
-	
+	}
 	public void startAttendentRounds() {
-		
+		attendent.makeRounds(animals);
 	}
 
 }
+
