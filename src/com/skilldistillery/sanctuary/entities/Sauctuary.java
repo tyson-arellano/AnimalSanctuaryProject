@@ -16,8 +16,10 @@ public class Sauctuary {
 	   
 	}
 	public void addAnimal(Animal animal) {
-		animals[numAnimals] = animal;
-		numAnimals++;
+//		for (int i = 0; i < MAX_CARS; i++) {
+//			if (cars[i] == null) {
+//				cars[i]= car;
+//				break;
 	}
 	
 	public void startAttendentRounds() {
