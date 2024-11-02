@@ -14,7 +14,7 @@ public class Dog extends Animal{
 		System.out.println("I'm munching on " + amount + " Dog Treats");
 	}
 
-	
+	@Override
 	public String speciesOfAnimal() {
 		return Dog.species;
 	}
