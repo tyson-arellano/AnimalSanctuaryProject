@@ -97,7 +97,7 @@ public class AnimalSantuaryApp {
 		System.out.println("*                Menu                   *");
 		System.out.println("*  1.  Display animals in the sanctuary *");
 		System.out.println("*  2.  Add animal to the sanctuary      *");
-		System.out.println("*  3.  Feed the animals                 *");
+		System.out.println("*  3.  Start attendant rounds           *");
 		System.out.println("*  4.  Exit                             *");
 		System.out.println("*****************************************");
 	}
