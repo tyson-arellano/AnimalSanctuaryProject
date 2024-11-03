@@ -81,6 +81,7 @@ public class AnimalSantuaryApp {
 			
 			case "4": 
 				exit = true;
+				
 				break;
 			
 				default: 

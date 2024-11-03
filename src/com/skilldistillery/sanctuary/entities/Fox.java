@@ -7,7 +7,7 @@ public class Fox extends Animal {
 
 		@Override
 		public void makeNoise() {
-			Fox.noise = "Yip! Yap! Gekker, Gekker";
+			Fox.noise = "YIP! YAP! GEKKER, GEKKER!";
 			System.out.println(noise);
 		}
 

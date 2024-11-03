@@ -3,7 +3,7 @@ package com.skilldistillery.sanctuary.entities;
 public class Horse extends Animal {
 	
 		private static String noise;
-		private static String species = "Horse";
+		private static String species = "horse";
 		
 		@Override
 		public void makeNoise() {
