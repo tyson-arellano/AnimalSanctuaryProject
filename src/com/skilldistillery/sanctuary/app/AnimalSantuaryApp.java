@@ -1,32 +1,112 @@
 package com.skilldistillery.sanctuary.app;
 
-import com.skilldistillery.sanctuary.entities.Attendent;
+import java.util.Scanner;
+
+
 import com.skilldistillery.sanctuary.entities.Dog;
+import com.skilldistillery.sanctuary.entities.Fox;
+import com.skilldistillery.sanctuary.entities.Horse;
 import com.skilldistillery.sanctuary.entities.Sanctuary;
 
 public class AnimalSantuaryApp {
 	public static void main(String[] args) {
-		Sanctuary san = new Sanctuary(); 
-		Attendent al = new Attendent();
-		Dog dog1 = new Dog();
-		dog1.setName("Gary"); 
-		Dog dog2 = new Dog();
-		Dog dog3 = new Dog();
-		Dog dog4 = new Dog();
-		Dog dog5 = new Dog();
-		Dog dog6 = new Dog();
-		
-		
-		san.addAnimal(dog1);
-		san.addAnimal(dog2);
-		san.addAnimal(dog3);
-		
-		san.addAnimal(dog4);
-		san.addAnimal(dog5);
-		san.addAnimal(dog6);
-		san.listAnimals();
-		
-		san.startAttendentRounds();;
+		 AnimalSantuaryApp app = new AnimalSantuaryApp();
+
+		app.launchApp();
 	}
-	
+	public void launchApp() {
+		Scanner sc = new Scanner(System.in);
+		
+		Sanctuary sanctuary = new Sanctuary();
+		
+		System.out.println("Welcome to Tyson's Animal Sanctuary. What would you like to do?");
+		
+		boolean exit = false;
+		
+		do {
+			menu();
+			
+			String input = sc.next();
+			
+			switch(input) {
+			
+			case "1": 
+				sanctuary.listAnimals();
+				break;
+			
+			case "2": 
+				if (sanctuary.isFull()) {
+					System.out.println("Sorry, all enclosures are full!");
+					break;
+				}
+				speciesMenu();
+				String species = sc.next();
+				
+				
+				switch (species) {
+				
+				case "1":
+				
+					System.out.println("What would you the dog's name to be?");
+					String givenName = sc.next();
+					Dog dog = new Dog();
+					dog.setName(givenName);
+					sanctuary.addAnimal(dog);
+					break;
+				case "2":
+				
+					System.out.println("What would you the horse's name to be?");
+					String givenName2 = sc.next();
+					Horse horse = new Horse();
+					horse.setName(givenName2);
+					sanctuary.addAnimal(horse);
+					break;
+				case "3": 
+					
+					
+					System.out.println("What would you the fox's name to be?");
+					String givenName3 = sc.next();
+					Fox fox = new Fox();
+					fox.setName(givenName3);
+					sanctuary.addAnimal(fox);
+					break;
+				default: System.out.println("Invalid choice. Please try again. ");
+				
+				}
+				break;
+			
+			case "3": 
+				sanctuary.startAttendentRounds();
+				break;
+			
+			case "4": 
+				exit = true;
+				break;
+			
+				default: 
+					System.err.println("Invalid choice. Please try again");
+			}
+			
+		}while(exit == false);
+		System.out.println("Goodbye!!");
+				
+		sc.close();
+	}
+	public void menu() {
+		System.out.println("****************************************");
+		System.out.println("		Menu");
+		System.out.println("*  1.Display animals in the sanctuary");
+		System.out.println("*  2.Add animal to the sanctuary");
+		System.out.println("*  3.Feed the animals");
+		System.out.println("*  4.Exit");
+		System.out.println("****************************************");
+	}
+	public void speciesMenu() {
+		System.out.println("What type of species would you like to add?");
+		System.out.println("**************");
+		System.out.println("* 1. Dog     *");
+		System.out.println("* 2. Horse   *");
+		System.out.println("* 3. Fox     *");
+		System.out.println("**************");
+	}
 }

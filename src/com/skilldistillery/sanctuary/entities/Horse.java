@@ -3,6 +3,7 @@ package com.skilldistillery.sanctuary.entities;
 public class Horse extends Animal {
 	
 		private static String noise;
+		private static String species = "Horse";
 		
 		@Override
 		public void makeNoise() {
@@ -12,9 +13,14 @@ public class Horse extends Animal {
 
 		@Override
 		public void eat(int amount) {
-			System.out.println("I'm munching on " + amount + " lbs of hay");
+			System.out.println(getName() + " is eating " + amount + " lbs of hay");
 		}
 
+		@Override
+		public String speciesOfAnimal() {
+			return Horse.species;
+		}
+		
 	}
 
 
