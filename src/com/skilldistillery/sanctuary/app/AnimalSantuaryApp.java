@@ -47,7 +47,7 @@ public class AnimalSantuaryApp {
 				
 				case "1":
 				
-					System.out.println("What would you the dog's name to be?");
+					System.out.println("What would you like to name the dog?");
 					String givenName = sc.next();
 					Dog dog = new Dog();
 					dog.setName(givenName);
@@ -55,7 +55,7 @@ public class AnimalSantuaryApp {
 					break;
 				case "2":
 				
-					System.out.println("What would you the horse's name to be?");
+					System.out.println("What would you like to name the horse?");
 					String givenName2 = sc.next();
 					Horse horse = new Horse();
 					horse.setName(givenName2);
@@ -64,13 +64,13 @@ public class AnimalSantuaryApp {
 				case "3": 
 					
 					
-					System.out.println("What would you the fox's name to be?");
+					System.out.println("What would you like to name the fox?");
 					String givenName3 = sc.next();
 					Fox fox = new Fox();
 					fox.setName(givenName3);
 					sanctuary.addAnimal(fox);
 					break;
-				default: System.out.println("Invalid choice. Please try again. ");
+				default: System.err.println("Invalid choice. Please try again. ");
 				
 				}
 				break;
@@ -88,25 +88,25 @@ public class AnimalSantuaryApp {
 			}
 			
 		}while(exit == false);
-		System.out.println("Goodbye!!");
+		System.out.println("Thank you for dropping by! Goodbye!!");
 				
 		sc.close();
 	}
 	public void menu() {
-		System.out.println("****************************************");
-		System.out.println("		Menu");
-		System.out.println("*  1.Display animals in the sanctuary");
-		System.out.println("*  2.Add animal to the sanctuary");
-		System.out.println("*  3.Feed the animals");
-		System.out.println("*  4.Exit");
-		System.out.println("****************************************");
+		System.out.println("*****************************************");
+		System.out.println("*                Menu                   *");
+		System.out.println("*  1.  Display animals in the sanctuary *");
+		System.out.println("*  2.  Add animal to the sanctuary      *");
+		System.out.println("*  3.  Feed the animals                 *");
+		System.out.println("*  4.  Exit                             *");
+		System.out.println("*****************************************");
 	}
 	public void speciesMenu() {
-		System.out.println("What type of species would you like to add?");
-		System.out.println("**************");
-		System.out.println("* 1. Dog     *");
-		System.out.println("* 2. Horse   *");
-		System.out.println("* 3. Fox     *");
-		System.out.println("**************");
+		System.out.println("********************************************");
+		System.out.println("What type of animal would you like to add? *");
+		System.out.println("*    1.   Dog                              *");
+		System.out.println("*    2.   Horse                            *");
+		System.out.println("*    3.   Fox                              *");
+		System.out.println("********************************************");
 	}
 }

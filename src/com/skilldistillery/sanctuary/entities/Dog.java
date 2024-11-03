@@ -2,7 +2,7 @@ package com.skilldistillery.sanctuary.entities;
 
 public class Dog extends Animal{
 	private static String noise;
-	private static String species = "Dog";
+	private static String species = "dog";
 	
 	@Override
 	public void makeNoise() {
@@ -12,7 +12,8 @@ public class Dog extends Animal{
 
 	@Override
 	public void eat(int amount) {
-		System.out.println(getName() + " is eating "+ amount + " dog treats");
+		makeNoise();
+		System.out.println("I'm " + getName() + " the "+ speciesOfAnimal() + " and I love munching on " + amount + " dog treats");
 	}
 
 	@Override

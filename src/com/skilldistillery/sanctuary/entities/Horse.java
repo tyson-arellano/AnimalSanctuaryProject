@@ -13,7 +13,8 @@ public class Horse extends Animal {
 
 		@Override
 		public void eat(int amount) {
-			System.out.println(getName() + " is eating " + amount + " lbs of hay");
+			makeNoise();
+			System.out.println("I'm " + getName() + " the " + speciesOfAnimal() + " and I love to eat " + amount + " lbs of hay");
 		}
 
 		@Override
