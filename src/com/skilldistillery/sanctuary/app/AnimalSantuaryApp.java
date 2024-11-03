@@ -36,7 +36,7 @@ public class AnimalSantuaryApp {
 			
 			case "2": 
 				if (sanctuary.isFull()) {
-					System.out.println("Sorry, all enclosures are full!");
+					System.err.println("Sorry, all enclosures are full!");
 					break;
 				}
 				speciesMenu();
