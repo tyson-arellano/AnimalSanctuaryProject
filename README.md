@@ -16,10 +16,10 @@
 	- MacOS Terminal
 
 ## Lessons Learned
-	I went into this project a bit nervou as I knew
+	I went into this project a bit nervous as I knew
 	I would be tasked with using arrays and iterating
 	through them. This is a concept I had been struggling
-	to grasp up to this point so it felt quite daunting 
+	to grasp up to this point so it felt quite daunting. 
 	But I utilized the for each auto complete feature 
 	offered by Eclipse IDE and made quick work of a 
 	few of them. Before I knew it, I had completed almost all
@@ -44,14 +44,17 @@
 	My switch logic was working great, and even giving
 	the appropiate error if a number outside the case switch
 	was input. However, if the user typed in anything 
-	other than a number, the whole program crashed! I didn't 
-	know how to handle input other than an integer. But after 
+	other than a number, the whole program crashed! The program
+	didn't know how to handle input other than an integer. But after 
 	some research and some re-thinking, it dawned on me that 
-	I could use a String input for my switch case in order to 
-	catch all keyboard inputs from the user. That way, if they
-	did not type in the one of available options exactly,
+	I could use a String input instead of an integer for my switch 
+	case in order to catch all keyboard inputs from the user. That 
+	way, if they did not type in a number of available options exactly,
 	(1, 2, 3, 4), the program would run the default error 
-	message and start the loop again!
+	message and start the loop again! Even if they typed words or 
+	special characters. Now that I think about it I probably could
+	have used if, else if statements instead of the second switch,
+	but oh well! I like my solution, and it works!
 
 	WooHoo!
 
